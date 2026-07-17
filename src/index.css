@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+@keyframes slideText {
+  0%, 20% {
+    transform: translateY(0);
+  }
+
+  25%, 45% {
+    transform: translateY(-80px);
+  }
+
+  50%, 70% {
+    transform: translateY(-160px);
+  }
+
+  75%, 95% {
+    transform: translateY(-240px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.move-up {
+  animation: slideText 12s infinite;
+}
+
+
