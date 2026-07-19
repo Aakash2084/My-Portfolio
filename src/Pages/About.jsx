@@ -127,7 +127,7 @@ function About() {
 
             <p className="mt-3 text-sm leading-7 text-gray-600">
               My path into web development began during my{" "}
-              <span className="  font-bold text-gray-700">MCA studies</span> at
+              <span className="  font-bold text-gray-700">BCA studies</span> at
               Pt. J.L.N. Govt. College. What started as curriculum requirements
               quickly became a genuine passion for creating digital solutions.{" "}
               <br />
