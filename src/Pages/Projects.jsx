@@ -28,7 +28,7 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Blogyfy",
+      title: "Blogify",
       image: blogify,
       logo: blogLogo,
       description:

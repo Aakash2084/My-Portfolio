@@ -11,7 +11,7 @@ import boxArrow from "../assets/boxArrow.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import insta from "../assets/insta.svg";
-import profile from "../assets/profile.jpeg";
+import profile from "../assets/profile.png";
 import code from "../assets/codeWhite.svg";
 import flash from "../assets/flash.svg";
 import star2 from "../assets/star2.svg";
