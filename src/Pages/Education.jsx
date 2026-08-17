@@ -65,7 +65,7 @@ function Education() {
             <div>
               <p className="text-xs text-gray-500 font-bold">DURATION</p>
 
-              <p className="font-bold text-sm">2024 - 2026</p>
+              <p className="font-bold text-sm text-gray-600 ">2024 - 2026</p>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ function Education() {
               <p className="text-xs text-gray-500 font-bold">GRADE</p>
 
               <p className="text-green-800 font-bold text-sm">
-                Last Result Pending!
+                7.0 CGPA
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ function Education() {
             <div>
               <p className="text-xs text-gray-500 font-bold">DURATION</p>
 
-              <p className="font-bold text-sm">2021 - 2024</p>
+              <p className="font-bold text-sm text-gray-600 ">2021 - 2024</p>
             </div>
           </div>
 

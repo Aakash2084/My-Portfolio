@@ -208,15 +208,15 @@ function Footer() {
           <div className="border-l border-blue-200/60  "></div>
 
           <div>
-            <p className="text-amber-300 font-extrabold  text-2xl ">7.5</p>
+            <p className="text-amber-300 font-extrabold  text-2xl ">7.0</p>
             <p className="text-white/70 text-sm ">CGPA</p>
           </div>
 
           <div className="border-l border-blue-200/60  "></div>
 
           <div>
-            <p className="text-blue-400 font-extrabold text-2xl ">2024</p>
-            <p className="text-white/70 text-sm ">Graduate</p>
+            <p className="text-blue-400 font-extrabold text-2xl ">2026</p>
+            <p className="text-white/70 text-sm ">Post Graduate</p>
           </div>
         </div>
       </div>{" "}

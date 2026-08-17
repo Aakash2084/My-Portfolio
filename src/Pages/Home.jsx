@@ -138,7 +138,7 @@ function Home() {
               </div>
               <div>
                 <label className="opacity-50">CGPA</label>
-                <p className="group-hover:text-amber-600">7.5 /10.0</p>
+                <p className="group-hover:text-amber-600">7.0 /10.0</p>
               </div>
             </div>
           </div>
@@ -317,7 +317,7 @@ hover:after:scale-150
             </div>
 
             <div className="group bg-white/90 text-gray-800 flex flex-col justify-center items-center gap-2 text-xs font-bold h-28 p-2 w-full max-w-[320px] xl:w-56 mt-5 rounded-lg transition-transform duration-500 hover:scale-105">
-              <p className="text-3xl text-green-700 font-extrabold ">7.5</p>
+              <p className="text-3xl text-green-700 font-extrabold ">7.0</p>
               <p className="text-sm font-bold text-gray-600 "> CGPA</p>
             </div>
           </div>
