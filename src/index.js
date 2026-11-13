@@ -8,6 +8,7 @@ import Education from "./Pages/Education";
 import Background from "./Components/Background";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
+import GithubProjectsCount from "./Components/GithubProjectCount";
 export {
   Navbar,
   Home,
@@ -19,4 +20,5 @@ export {
   Background,
   Footer,
   ScrollToTop,
+  GithubProjectsCount,
 };

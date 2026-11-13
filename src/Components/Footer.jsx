@@ -1,17 +1,16 @@
-import React from "react";
-import star from "../assets/starFooter.svg";
-import email from "../assets/emailGreen.svg";
-import arrow from "../assets/boxArrow.svg";
-import linkedinB from "../assets/linkedinBlue.svg";
-import githubA from "../assets/githubAmber.svg";
-import code from "../assets/codePurple.svg";
-import heart from "../assets/heart.svg";
-import insta from "../assets/insta.svg";
 
-import linkedin from "../assets/linkedin.svg";
-import github from "../assets/github.svg";
-import arrowTop from "../assets/arrowTop.svg";
-import cup from "../assets/cup.svg";
+import React from "react";
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+FaExternalLinkAlt,
+  FaHeart,
+  FaCoffee,
+  FaStar,
+  FaBriefcase
+} from "react-icons/fa";
 
 function Footer() {
   const scrollToTop = () => {
@@ -20,221 +19,249 @@ function Footer() {
       behavior: "smooth",
     });
   };
+
+  const contactCards = [
+    {
+      title: "EMAIL ME",
+      value: "aakashsolanki325@g...",
+      icon: FaEnvelope,
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=aakashsolanki325@gmail.com",
+    },
+    {
+      title: "MESSAGE ME",
+      value: "LinkedIn Profile",
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/aakash-solanki-5530762b9/",
+    },
+    {
+      title: "GITHUB",
+      value: "github.com/Aakash2084",
+      icon: FaGithub,
+      link: "https://github.com/Aakash2084",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: FaEnvelope,
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=aakashsolanki325@gmail.com",
+      label: "Email",
+    },
+    {
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/aakash-solanki-5530762b9/",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaGithub,
+      link: "https://github.com/Aakash2084",
+      label: "GitHub",
+    },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/aakash_1364/",
+      label: "Instagram",
+    },
+  ];
+
   return (
-    <div className="bg-[#242A31] mt-20 flex flex-col items-center gap-5">
-      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-5">
-        <div className=" mt-15 h-10 w-72 rounded-full flex justify-center items-center gap-2  border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl ">
-          {/* Ping Dot */}
-          <div className=" relative flex items-center justify-center ">
-            <span className="absolute h-2.5 w-2.5 rounded-full bg-green-500 animate-ping"></span>
-            <span className="h-2.5 w-2.5 rounded-full bg-green-500"></span>
+    <footer className="mt-20 bg-[#171B2D] text-white">
+
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-12 sm:py-16">
+
+        {/* Connect Badge */}
+        <div className="flex justify-center">
+          <div className="flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-5 py-2">
+
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-indigo-400"></span>
+            </span>
+
+            <p className="text-sm font-semibold text-indigo-300">
+              Let's Connect & Build Together
+            </p>
+
+            <FaStar className="text-violet-400" size={15} />
+
           </div>
-
-          {/* Text */}
-          <p className="text-green-400 font-bold text-sm ">
-            Let's Connect & Build Together
-          </p>
-
-          {/* Star */}
-          <img className="h-4 animate-pulse " src={star} alt="About" />
         </div>
 
-        <p className="text-center text-2xl sm:text-3xl font-extrabold">
-          Ready to Start Your Next Project?
-        </p>
-        <div className="text-gray-300 text-sm text-center flex flex-col items-center max-w-2xl px-4">
-          <p>
+        {/* Heading */}
+        <div className="mt-7 text-center">
+
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
+            Ready to Start Your Next Project?
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-7 text-slate-400">
             I'm always excited to work on new challenges and contribute to
-            innovative projects. Let's
+            innovative projects. Let's discuss how we can bring your ideas
+            to life.
           </p>
-          <p>discuss how we can bring your ideas to life.</p>
+
         </div>
 
-        <div className="mt-5 grid w-full max-w-7xl grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=aakashsolanki325@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="h-20 w-full bg-emerald-500/20 cursor-pointer backdrop-blur-xl rounded-xl border border-green-500/30 shadow-2xl flex justify-evenly items-center  group transition-transform duration-500 hover:scale-105  ">
-              <div className="h-10 w-10 bg-emerald-500/20  rounded-xl flex justify-center items-center transition-transform duration-500 group-hover:bg-emerald-500/30  ">
-                <img className="h-6" src={email} alt="" />
-              </div>
+        {/* Contact Cards */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
 
-              <div>
-                <p className="text-xs text-white/80 ">EMAIL ME</p>
-                <a className="text-xs font-bold " href="">
-                  aakashsolanki325@g...
-                </a>
-              </div>
+          {contactCards.map((item) => {
+            const Icon = item.icon;
 
-              <div>
-                <img
-                  className="h-4 brightness-70 transition-transform duration-500 group-hover:brightness-100 "
-                  src={arrow}
-                  alt=""
-                />
-              </div>
-            </div>
-          </a>
+            return (
+              <a
+                key={item.title}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex min-h-20 items-center justify-between gap-3 rounded-xl border border-indigo-400/20 bg-white/[0.04] px-4 py-4 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-400/50 hover:bg-indigo-500/10 hover:shadow-lg hover:shadow-indigo-950/30"
+              >
 
-          <a href="https://www.linkedin.com/in/aakash-solanki-5530762b9/">
-            <div className="h-20 w-full bg-blue-500/20 cursor-pointer backdrop-blur-xl rounded-xl border border-blue-500/30 shadow-2xl flex justify-evenly items-center  group transition-transform duration-500 hover:scale-105  ">
-              <div className="h-10 w-10 bg-blue-500/20 rounded-xl flex justify-center items-center transition-transform duration-500 group-hover:bg-blue-500/30  ">
-                <img className="h-4" src={linkedinB} alt="" />
-              </div>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-300 transition-all duration-300 group-hover:bg-indigo-500/25 group-hover:text-white">
+                  <Icon size={21} />
+                </div>
 
-              <div>
-                <p className="text-xs text-white/80 ">MESSAGE ME</p>
-                <a className="text-xs font-bold " href="">
-                  http://www.linkedi...
-                </a>
-              </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-medium tracking-wider text-slate-400">
+                    {item.title}
+                  </p>
 
-              <div>
-                <img
-                  className="h-4 brightness-70 transition-transform duration-500 group-hover:brightness-100 "
-                  src={arrow}
-                  alt=""
-                />
-              </div>
-            </div>
-          </a>
+                  <p className="mt-1 truncate text-sm font-semibold text-slate-200">
+                    {item.value}
+                  </p>
+                </div>
 
-          <a href="https://github.com/Aakash2084">
-            <div className="h-20 w-full bg-amber-500/20 cursor-pointer backdrop-blur-xl rounded-xl border border-amber-500/30 shadow-2xl flex justify-evenly items-center  group transition-transform duration-500 hover:scale-105  ">
-              <div className="h-10 w-10 bg-amber-500/20 rounded-xl flex justify-center items-center transition-transform duration-500 group-hover:bg-amber-500/30  ">
-                <img className="h-6" src={githubA} alt="" />
-              </div>
+              <FaExternalLinkAlt
+  size={16}
+  className="shrink-0 text-slate-500 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-indigo-300"
+/>
 
-              <div>
-                <p className="text-xs text-white/80 ">GITHUB</p>
-                <a className="text-xs font-bold " href="">
-                  http://github/...
-                </a>
-              </div>
-
-              <div>
-                <img
-                  className="h-4 brightness-70 transition-transform duration-500 group-hover:brightness-100 "
-                  src={arrow}
-                  alt=""
-                />
-              </div>
-            </div>
-          </a>
-
-          <div className="h-20 w-full bg-purple-500/20 cursor-pointer backdrop-blur-xl rounded-xl border border-purple-500/30 shadow-2xl flex justify-evenly items-center  group transition-transform duration-500 hover:scale-105  ">
-            <div className="h-10 w-10 bg-purple-500/20 rounded-xl flex justify-center items-center transition-transform duration-500 group-hover:bg-purple-500/30  ">
-              <img className="h-6" src={code} alt="" />
-            </div>
-
-            <div>
-              <p className="text-xs text-white/80 ">AVAILABLE FOR</p>
-              <a className="text-xs font-bold " href="">
-                Full-time Opportunities
               </a>
+            );
+          })}
+
+          {/* Availability Card */}
+          <div className="flex min-h-20 items-center gap-3 rounded-xl border border-violet-400/20 bg-violet-500/10 px-4 py-4">
+
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-500/20 text-violet-300">
+              <FaBriefcase size={21} />
             </div>
 
-            <div>
-              <img
-                className="h-4 brightness-70 transition-transform duration-500 group-hover:brightness-100 "
-                src={arrow}
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div className=" mt-5 flex items-center gap-2 ">
-          <p className="font-bold text-lg ">Follow My Journey </p>
-          <img className="h-5 animate-pulse " src={heart} alt="" />
-        </div>
-        <div className="flex flex-wrap justify-center items-center gap-5">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=aakashsolanki325@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="group relative flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-white/30 bg-white/10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <span className="absolute inset-0 origin-bottom scale-y-0 bg-white/30 transition-transform duration-300 ease-out group-hover:scale-y-100"></span>
-              <img
-                className="relative z-10 w-6 brightness-0 invert  transition-all duration-300 group-hover:scale-110 group-hover:brightness-0 group-hover:invert"
-                src={email}
-                alt=""
-              />
-            </div>
-          </a>
+            <div className="min-w-0">
+              <p className="text-xs font-medium tracking-wider text-slate-400">
+                OPEN TO
+              </p>
 
-          <a href="https://www.linkedin.com/in/aakash-solanki-5530762b9/">
-            <div className="group relative flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-white/30 bg-white/10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <span className="absolute inset-0 origin-bottom scale-y-0 bg-white/30 transition-transform duration-300 group-hover:scale-y-100"></span>
-              <img
-                className="relative z-10 w-5 brightness-0  invert transition duration-300 group-hover:brightness-0 group-hover:invert"
-                src={linkedin}
-                alt=""
-              />
+              <p className="mt-1 text-sm font-semibold text-slate-200">
+                Full-time Opportunities
+              </p>
             </div>
-          </a>
 
-          <a href="https://github.com/Aakash2084">
-            <div className="group relative flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-white/30 bg-white/10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <span className="absolute inset-0 origin-bottom scale-y-0 bg-white/30 transition-transform duration-300 group-hover:scale-y-100"></span>
-              <img
-                className="relative brightness-0 invert z-10 w-5 transition duration-300 group-hover:brightness-0 group-hover:invert"
-                src={github}
-                alt=""
-              />
-            </div>
-          </a>
-
-          <a href="https://www.instagram.com/aakash_1364/">
-            <div className="group relative flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-white/30 bg-white/10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <span className="absolute inset-0 origin-bottom scale-y-0 bg-white/30 transition-transform duration-300 group-hover:scale-y-100"></span>
-              <img
-                className="relative brightness-0 invert z-10 w-6 transition duration-300 group-hover:brightness-0 group-hover:invert"
-                src={insta}
-                alt=""
-              />
-            </div>
-          </a>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-5">
-          <div>
-            <p className="text-green-500 font-extrabold text-2xl ">5+</p>
-            <p className="text-white/70 text-sm ">Projects</p>
           </div>
 
-          <div className="border-l border-blue-200/60  "></div>
-
-          <div>
-            <p className="text-amber-300 font-extrabold  text-2xl ">7.0</p>
-            <p className="text-white/70 text-sm ">CGPA</p>
-          </div>
-
-          <div className="border-l border-blue-200/60  "></div>
-
-          <div>
-            <p className="text-blue-400 font-extrabold text-2xl ">2026</p>
-            <p className="text-white/70 text-sm ">Post Graduate</p>
-          </div>
         </div>
-      </div>{" "}
-      {/* max-w-7xl wrapper */}
-      <div className="w-full bg-gray-900 mt-14">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-5 text-sm text-white/70 lg:flex-row">
-          <p>© 2026 Aakash Solanki. All rights reserved.</p>
 
-          <div className="flex items-center gap-3">
-            <p>Made with</p>
-            <img className="h-5" src={heart} alt="" />
-            <p>and</p>
-            <img className="h-5" src={cup} alt="" />
-            <p>in India</p>
+        {/* Social Links */}
+        <div className="mt-12 text-center">
+
+          <div className="flex items-center justify-center gap-2">
+            <h3 className="text-lg font-bold">
+              Follow My Journey
+            </h3>
+
+            <FaHeart className="text-rose-400" size={18} />
           </div>
+
+          <div className="mt-5 flex justify-center gap-4">
+
+            {socialLinks.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <a
+                  key={item.label}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-400/50 hover:bg-indigo-500 hover:text-white hover:shadow-lg hover:shadow-indigo-500/20"
+                >
+                  <Icon size={21} />
+                </a>
+              );
+            })}
+
+          </div>
+
         </div>
+
+        {/* Stats */}
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+
+          <div className="text-center">
+            <p className="text-2xl font-extrabold text-indigo-400">
+              5+
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              Projects
+            </p>
+          </div>
+
+          <div className="hidden sm:block h-10 w-px bg-white/15"></div>
+
+          <div className="text-center">
+            <p className="text-2xl font-extrabold text-violet-400">
+              7.0
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              CGPA
+            </p>
+          </div>
+
+          <div className="hidden sm:block h-10 w-px bg-white/15"></div>
+
+          <div className="text-center">
+            <p className="text-2xl font-extrabold text-indigo-300">
+              2026
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              Post Graduate
+            </p>
+          </div>
+
+        </div>
+
       </div>
-    </div>
+
+      {/* Bottom Footer */}
+      <div className="border-t border-white/10 bg-[#121626]">
+
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 text-center text-sm text-slate-400 sm:px-8 md:flex-row">
+
+          <p>
+            © 2026 Aakash Solanki. All rights reserved.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span>Made with</span>
+            <FaHeart className="text-rose-400" />
+            <span>and</span>
+            <FaCoffee className="text-amber-400" />
+            <span>in India</span>
+          </div>
+
+          <button
+            onClick={scrollToTop}
+            className="cursor-pointer font-semibold text-indigo-300 transition-colors hover:text-white"
+          >
+            Back to top ↑
+          </button>
+
+        </div>
+
+      </div>
+
+    </footer>
   );
 }
 

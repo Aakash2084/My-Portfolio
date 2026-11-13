@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import codeWhite from "../assets/codeWhite.svg";
 import boxArrow from "../assets/boxArrow.svg";
 import notes from "../assets/notes.png";
@@ -13,10 +13,46 @@ import weatherLogo from "../assets/weather.svg";
 import convert from "../assets/convert.svg";
 import medal from "../assets/medal.svg";
 import arrow from "../assets/arrow.svg";
+import jobPortal from '../assets/jobPortal.png'
+import jobLogo from '../assets/jobLogo.png'
 function Projects() {
+
+  const [projectCount, setProjectCount] = useState(0);
+
+useEffect(() => {
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch(
+        "https://api.github.com/users/Aakash2084/repos?per_page=100"
+      );
+
+      if (!response.ok) throw new Error("GitHub API error");
+
+      const repos = await response.json();
+
+      setProjectCount(repos.filter((repo) => !repo.fork).length);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchProjects();
+}, []);
+
   const projects = [
-    {
+     {
       id: 1,
+      title: "Job Portal",
+      image: jobPortal,
+      logo: jobLogo,
+      description:
+       "Find jobs, apply with ease, and manage applications. A modern platform connecting job seekers with recruiters through seamless hiring.",
+      tech: ["React", "MongoDB", "Node.js", "+2"],
+      demo: "https://job-portal-pi-ecru.vercel.app/",
+      code: "https://github.com/Aakash2084/job-portal",
+    },
+    {
+      id: 2,
       title: "Notes Application",
       image: notes,
       logo: noteLogo,
@@ -27,7 +63,7 @@ function Projects() {
       code: "https://github.com/Aakash2084/notes-app",
     },
     {
-      id: 2,
+      id: 3,
       title: "Blogify",
       image: blogify,
       logo: blogLogo,
@@ -38,7 +74,7 @@ function Projects() {
       code: "https://github.com/Aakash2084/blog-application",
     },
     {
-      id: 3,
+      id: 4,
       title: "Weather Application",
       image: weather,
       logo: weatherLogo,
@@ -49,7 +85,7 @@ function Projects() {
       code: "https://github.com/Aakash2084/weather-application",
     },
     {
-      id: 4,
+      id: 5,
       title: "Currency Convertor",
       image: currency,
       logo: convert,
@@ -71,7 +107,7 @@ function Projects() {
         </div>
 
         {/* Text */}
-        <p>5+ Project Built & Deployed</p>
+      <p>{projectCount}+ Projects Built & Deployed</p>
 
         {/* Star */}
         <img className="h-4  " src={medal} alt="About" />
@@ -107,7 +143,9 @@ function Projects() {
 
       <div className="text-gray-600 font-bold mt-2 grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-2xl">
         <div className=" bg-white/90 border-2 border-white h-20 w-full rounded-xl flex flex-col items-center justify-center gap-1 ">
-          <p className="text-gray-800 font-extrabold text-xl">5+</p>
+          <p className="text-gray-800 font-extrabold text-xl">
+  {projectCount}+
+</p>
           <p className="text-xs font-extrabold ">Projects</p>
         </div>
 
