@@ -331,14 +331,14 @@ hover:after:scale-150
               </div>
             </div>
             <p className=" text-lg font-bold tracking-tight text-slate-800">
-              Blog Application
+              Job Portal
             </p>
-            <p className="mt-3 text-sm leading-7 text-slate-500">
-              A full-stack blog application built with Node.js, Express.js,
-              MongoDB, and EJS. Users can create, read, update, and delete
-              blogs, manage profiles, upload images, and interact through
-              comments with secure authentication.
-            </p>
+           <p className="mt-3 text-sm leading-7 text-slate-500">
+  A full-stack job portal built with React.js, Node.js, Express.js, and
+  MongoDB. Job seekers can explore jobs, apply for positions, and track
+  applications, while recruiters can manage companies, post jobs, and
+  manage applicants with secure role-based authentication.
+</p>
 
             <div className="mt-3 flex flex-wrap gap-2 text-xs ">
               <button className="rounded-full bg-white px-4 py-1 text-gray-600 transition-all duration-300 hover:bg-gray-200">
@@ -354,7 +354,7 @@ hover:after:scale-150
 
             <div className="mt-5 flex flex-col items-center gap-3 text-xs font-bold sm:flex-row sm:justify-start sm:items-center">
               <a
-                href="https://blog-application-xpjl.onrender.com"
+                href= "https://job-portal-pi-ecru.vercel.app/"
                 className="w-full sm:w-auto"
               >
                 <button className="flex h-10 w-full sm:min-w-[120px] items-center justify-center gap-2 rounded-2xl bg-slate-800 text-white shadow-md transition-all duration-500 hover:scale-105 hover:bg-slate-700 hover:shadow-xl cursor-pointer">
@@ -364,7 +364,7 @@ hover:after:scale-150
               </a>
 
               <a
-                href="https://github.com/Aakash2084/blog-application"
+                href="https://github.com/Aakash2084/job-portal"
                 className="w-full sm:w-auto"
               >
                 <button className="flex h-10 w-full sm:min-w-[90px] items-center justify-center gap-1 rounded-2xl border border-slate-300 bg-white group transition-all duration-500 hover:scale-105 hover:bg-slate-800 shadow-lg cursor-pointer">
